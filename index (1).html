@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>CIVIA Smart Kiosk</title>
+<meta name="description" content="CIVIA Smart Kiosk: requirements, tutorials, queue numbers, and claim codes (English and Filipino).">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%9B%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--tx:#0a2540;--card:#fff;--line:#bcd0e0;--mut:#4a5b6e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Poppins,system-ui,sans-serif}
+header{padding:16px 16px 4px;max-width:900px;margin:0 auto}
+h1{font-size:18px;margin:0 0 4px}
+header p{margin:0;font-size:13px;color:var(--mut)}
+nav{display:flex;flex-wrap:wrap;gap:6px;padding:12px 16px 6px;max-width:900px;margin:0 auto}
+nav button,.tg button{font:500 13px Poppins,system-ui,sans-serif;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--tx);cursor:pointer}
+nav button[aria-selected="true"]{background:#0B3D91;color:#fff;border-color:#0B3D91}
+.tg{display:flex;gap:6px;padding:0 16px 8px;max-width:900px;margin:0 auto}
+#stage{display:flex;justify-content:center;padding:0;background:#dfe9f2}
+.f{--p:#0B3D91;--s:#3BA7F2;--t:#7FE7D6;--b:#E8F6FF;--x:#0A2540;--c:#fff;--m:#4a5b6e;--on:#fff;width:100%;max-width:520px;height:100vh;height:100dvh;min-height:0;flex:none;position:relative;background:var(--b);color:var(--x);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:none;font-size:16px;border-radius:0}
+.f.big{font-size:20px}
+.bar{background:var(--p);color:var(--on);padding:10px 12px;display:flex;justify-content:space-between;align-items:center;font-weight:600}
+.pills span{border:1px solid currentColor;border-radius:999px;padding:2px 8px;font-size:11px;margin-left:4px}
+.body{flex:1;min-height:0;overflow-y:auto;scrollbar-width:none;padding:14px;display:flex;flex-direction:column;gap:10px}.body::-webkit-scrollbar{display:none}
+h2{margin:0;font-size:1.3em}
+h3{margin:0;font-size:1.05em}
+.sub{color:var(--m);margin:0}
+.card{background:var(--c);border-radius:18px;padding:12px;border:2px solid transparent}
+.card.sel{border-color:var(--s)}
+.opts{flex:1;display:flex;flex-direction:column;gap:12px}
+.opt{flex:1;min-height:70px;background:var(--c);border:2px solid var(--s);border-radius:18px;padding:0 20px;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.opt b{font-size:1.2em;color:var(--p)}
+.opt span{color:var(--m);font-size:.85em}
+.vid{flex:1;min-height:240px;background:var(--p);color:var(--on);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative}
+.play{width:0;height:0;border-left:36px solid var(--on);border-top:22px solid transparent;border-bottom:22px solid transparent;margin-left:10px}
+.tl{position:absolute;left:14px;right:14px;bottom:14px;height:6px;border-radius:3px;background:rgba(127,127,127,.5)}
+.tl i{display:block;width:30%;height:100%;border-radius:3px;background:var(--on)}
+.touch{margin:0;text-align:center;font-weight:600;font-size:1.25em;color:var(--p)}
+.vfull{flex:1;background:var(--p);color:var(--on);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;position:relative;text-align:center;padding:24px}
+.vfull h2{font-size:2em}
+.vfull .touch{color:var(--on);position:absolute;bottom:48px;left:0;right:0}
+.vid.mini{flex:none;min-height:110px;margin:6px 0}
+.vid.mini .play{border-left-width:24px;border-top-width:15px;border-bottom-width:15px}
+.btn{background:var(--p);color:var(--on);border-radius:999px;padding:14px;text-align:center;font-weight:600;font-size:1.05em}
+.btn.alt{background:var(--c);color:var(--p);border:2px solid var(--p)}
+.row{display:flex;gap:8px}.row>*{flex:1}
+.chk{display:flex;gap:8px;align-items:flex-start;padding:4px 0}
+.ok{width:20px;height:20px;border-radius:50%;background:var(--t);color:#0A2540;display:grid;place-items:center;font-size:12px;font-weight:700;flex:none}
+.cd{display:inline-block;min-width:34px;text-align:center;background:var(--p);color:var(--on);border-radius:8px;padding:1px 6px;margin-right:8px;font-weight:700;font-size:.85em}
+.tx{padding:9px 12px;border-radius:14px}
+.tx.mu{display:flex;align-items:center}
+.cbx{width:24px;height:24px;border:2px solid var(--p);border-radius:6px;margin-right:10px;flex:none;display:grid;place-items:center;font-size:15px;font-weight:700;color:var(--on)}
+.tx.sel .cbx{background:var(--p)}
+.ln{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--line)}
+.ln:last-child{border-bottom:0}
+details.card{padding:0}
+summary{padding:11px 12px;cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"▾";color:var(--m)}
+details[open] summary::after{content:"▴"}
+.dt{padding:0 12px 12px;font-size:.92em}
+.dt b{display:block;margin:6px 0 2px}
+.chip{display:inline-block;background:var(--c);border:1px solid var(--s);color:var(--x);border-radius:999px;padding:5px 10px;font-size:.85em;margin:0 4px 4px 0}
+.bub{padding:9px 12px;border-radius:16px;max-width:85%}
+.bub.a{background:var(--c);align-self:flex-start}
+.bub.u{background:var(--s);color:#0A2540;align-self:flex-end}
+.note{font-size:.8em;color:var(--m);text-align:center;margin:0}
+.qn{font-size:3.4em;font-weight:700;color:var(--p);line-height:1;text-align:center}
+.tk{width:210px;margin:auto;background:#fff;color:#000;padding:14px 12px;text-align:center;font-family:ui-monospace,Menlo,Consolas,monospace;border-bottom:2px dashed #000;font-size:12px;line-height:1.5}
+.tk b{font-size:44px;display:block;line-height:1.1}
+.fab{align-self:flex-end;margin:0 12px 12px;background:var(--s);color:#0A2540;border-radius:999px;padding:10px 18px;font-weight:600}
+.pop{margin:0 10px 10px;background:var(--c);border:2px solid var(--s);border-radius:18px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.ab{display:flex;gap:8px;align-items:center;border-color:var(--s)}
+.code{display:flex;gap:6px;justify-content:center;margin:4px 0}
+.code i{width:44px;height:56px;background:var(--c);border:2px solid var(--s);border-radius:12px;display:grid;place-items:center;font-style:normal;font-size:1.6em;font-weight:700}
+.keys{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.keys span{background:var(--c);border-radius:14px;padding:13px 0;text-align:center;font-size:1.4em;font-weight:600}
+body{-webkit-user-select:none;user-select:none}
+.opt,.btn,.tx,.keys span,.fab,.chip,.pills span,.vfull,summary,.bar>span:first-child{cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.opt:active,.btn:active,.tx:active,.keys span:active,.fab:active{transform:scale(.97);filter:brightness(.94)}
+.asst{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;background:rgba(10,37,64,.4)}
+.qq{display:flex;flex-wrap:wrap;gap:4px}
+#toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#0A2540;color:#fff;padding:10px 18px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:50;text-align:center}
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<div id="toast" role="status"></div>
+<script>
+var lang='en',cur='wel',bg=false,sel=[],rq=0,code='',tries=0,DEMO='123456';
+function L(a,b){return lang==='fil'?b:a}
+function TB(){return '<div class="bar"><span>CIVIA</span><span class="pills"><span>'+(lang==='fil'?'EN | <b>FIL</b>':'<b>EN</b> | FIL')+'</span><span>A+</span></span></div>'}
+var V=['Valid ID','Valid ID'],VP=['Valid IDs of the parents','Valid ID ng mga magulang'],VB=['Valid IDs of both parties','Valid ID ng dalawang panig'],VN=['Valid ID of the informant','Valid ID ng nag-uulat'],PF=['Petition form','Petition form'],AD=['Affidavit of delayed registration','Affidavit of delayed registration'],BK=['Birth certificate of the child','Birth certificate ng bata'];
+var TX=[
+['B','Birth Registration','Pagpaparehistro ng Kapanganakan',[['Certificate of Live Birth (filled out)','Certificate of Live Birth (napunan na)'],VP,['Parents’ marriage certificate, if married','Marriage certificate ng mga magulang, kung kasal']]],
+['DB','Delayed Birth Registration','Huling Pagpaparehistro ng Kapanganakan',[AD,['Two supporting records (baptismal, school, or medical)','Dalawang sumusuportang rekord (binyag, paaralan, o medikal)'],['Valid ID of the applicant','Valid ID ng aplikante']]],
+['ML','Marriage License','Lisensya sa Kasal',[['Birth certificates of both parties','Birth certificate ng dalawang panig'],VB,['Seminar certificates, as required','Mga seminar certificate, ayon sa kailangan']]],
+['MR','Marriage Registration','Pagpaparehistro ng Kasal',[['Marriage certificate (filled out and signed)','Marriage certificate (napunan at napirmahan)'],VB,['Marriage license','Marriage license']]],
+['D','Death Registration','Pagpaparehistro ng Kamatayan',[['Certificate of Death (filled out)','Certificate of Death (napunan na)'],VN,['Medical certificate or barangay certification','Medical certificate o barangay certification']]],
+['DD','Delayed Death Registration','Huling Pagpaparehistro ng Kamatayan',[AD,['Supporting records','Mga sumusuportang rekord'],VN]],
+['CC','Certified True Copy','Certified True Copy',[['Request form','Request form'],V,['Authorization letter, if not the owner','Authorization letter, kung hindi ikaw ang may-ari']]],
+['CE','Correction of Clerical Error','Pagwawasto ng Clerical Error',[PF,['Supporting public or private documents','Mga sumusuportang pampubliko o pribadong dokumento'],V]],
+['CN','Change of First Name','Pagpapalit ng Unang Pangalan',[PF,['Supporting documents','Mga sumusuportang dokumento'],['Valid ID and clearances, as required','Valid ID at mga clearance, ayon sa kailangan']]],
+['L','Legitimation','Lehitimasyon',[['Affidavit of legitimation','Affidavit of legitimation'],BK,['Marriage certificate of the parents','Marriage certificate ng mga magulang']]],
+['AP','Acknowledgment of Paternity','Pagkilala sa Pagka-ama',[['Affidavit of acknowledgment','Affidavit of acknowledgment'],BK,VP]],
+['CD','Court Decrees and Annotation','Mga Court Decree at Annotation',[['Certified copy of the court decree','Certified copy ng court decree'],['Certificate of finality','Certificate of finality'],V]]
+];
+function nm(t){return L(t[1],t[2])}
+function li(a){return a.map(function(x){return '<div class="chk"><span class="ok">✓</span>'+L(x[0],x[1])+'</div>'}).join('')}
+function rows(sel){return TX.map(function(t,i){return '<div class="card tx'+(i===sel?' sel':'')+'"><span class="cd">'+t[0]+'</span>'+nm(t)+'</div>'}).join('')}
+function rowsM(sel){return TX.map(function(t,i){var on=sel.indexOf(i)>-1;return '<div class="card tx mu'+(on?' sel':'')+'"><span class="cbx">'+(on?'✓':'')+'</span><span class="cd">'+t[0]+'</span>'+nm(t)+'</div>'}).join('')}
+function fab(){return '<div class="fab">'+L('Assist me','Tulungan ako')+'</div>'}
+function opt(t,s){return '<div class="opt"><b>'+t+'</b><span>'+s+'</span></div>'}
+function btn(a,b,alt){return '<div class="btn'+(alt?' alt':'')+'">'+L(a,b)+'</div>'}
+function selNames(){return sel.map(function(i){return nm(TX[i])}).join('<br>')}
+function qnum(){return sel.length>1?'MT-012':(sel.length?TX[sel[0]][0]+'-012':'B-012')}
+function servList(){return sel.map(function(i,n){return '<div class="ln"><span>'+nm(TX[i])+'</span><b style="color:var(--p)">'+TX[i][0]+'-0'+(18-n*4)+'</b></div>'}).join('')}
+function codeBoxes(){return '<div class="code">'+[0,1,2,3,4,5].map(function(i){return '<i>'+(code.charAt(i)||'')+'</i>'}).join('')+'</div>'}
+function AQ(){return [[L('What do I need for birth registration?','Ano ang kailangan ko sa pagpaparehistro ng kapanganakan?'),L('Tap “View requirements,” then choose Birth Registration. You can print the list there.','I-tap ang “Tingnan ang mga requirement,” tapos piliin ang Pagpaparehistro ng Kapanganakan. Maaari mong i-print ang listahan doon.')],[L('Is my birth certificate valid for a passport?','Valid ba ang birth certificate ko para sa passport?'),L('I can’t give a reliable answer to that. Please contact or visit the Civil Registrar’s Office for official evaluation.','Wala akong maibibigay na maaasahang sagot diyan. Makipag-ugnayan o pumunta sa Civil Registrar’s Office para sa opisyal na pagsusuri.')]]}
+function steps(){return L('<b>At the Office</b>1. Get a queue number at this kiosk.<br>2. Wait for your number on the display screen.<br>3. Submit your documents at the window. Office staff will check them.<br>4. Pay any required fees. When you receive the Ready-for-Claim message, enter its code at this kiosk to get your queue number for claiming.','<b>Sa Opisina</b>1. Kumuha ng queue number sa kiosk na ito.<br>2. Hintayin ang numero mo sa display screen.<br>3. Isumite ang mga dokumento sa bintana. Susuriin ito ng staff ng opisina.<br>4. Bayaran ang kinakailangang bayarin. Kapag natanggap mo ang Ready-for-Claim na mensahe, ilagay ang code nito sa kiosk na ito para makuha ang queue number mo sa pag-claim.')}
+function home(x,ab){return TB()+'<div class="body">'+(ab||'')+'<h2>'+L('What would you like to do?','Ano ang gusto mong gawin?')+'</h2><p class="sub">City Civil Registrar’s Office, Puerto Princesa</p><div class="opts">'+
+opt(L('Get a queue number','Kumuha ng queue number'),L('Walk-in, no account needed. Choose one or more transactions.','Walk-in, hindi kailangan ng account. Pumili ng isa o higit pang transaksyon.'))+
+opt(L('I have a claim code','May claim code ako'),L('From your Ready-for-Claim message','Mula sa iyong Ready-for-Claim na mensahe'))+
+opt(L('View requirements','Tingnan ang mga requirement'),L('See what to bring and print the list','Alamin ang dadalhin at i-print ang listahan'))+
+opt(L('Tutorials','Mga Tutorial'),L('How to use the kiosk and each transaction','Paano gamitin ang kiosk at ang bawat transaksyon'))+
+'</div><p class="note">'+L('Office hours: Mon–Fri, 8:00 AM–5:00 PM','Oras ng opisina: Lun–Biy, 8:00 AM–5:00 PM')+'<br>'+L('Need help? Tap Assist me or approach our staff.','Kailangan ng tulong? I-tap ang Tulungan ako o lumapit sa aming staff.')+'</p></div>'+x}
+function pop(u,a){return '<div class="pop"><div class="row" style="align-items:center"><b>'+L('Assist me','Tulungan ako')+'</b><span class="sub" data-x="1" style="flex:none;padding:6px 12px">✕</span></div><div class="bub a">'+L('Hi! Ask me anything about requirements or how this kiosk works.','Kumusta! Magtanong tungkol sa mga requirement o kung paano gamitin ang kiosk.')+'</div><div class="bub u">'+u+'</div><div class="bub a">'+a+'</div><div class="qq"><span class="chip" data-q="0">'+AQ()[0][0]+'</span><span class="chip" data-q="1">'+AQ()[1][0]+'</span></div><div class="row" style="align-items:center"><div class="chip" style="flex:1;margin:0">'+L('Type your question…','I-type ang tanong mo…')+'</div><span class="btn" style="flex:none;padding:8px 14px">'+L('Speak','Magsalita')+'</span></div><p class="note">'+L('Preliminary guidance only. For official evaluation, please ask our staff.','Paunang gabay lamang. Para sa opisyal na pagsusuri, magtanong sa aming staff.')+'</p></div>'}
+function keys(){return '<div class="keys">'+'123456789'.split('').map(function(k){return '<span>'+k+'</span>'}).join('')+'<span style="font-size:1em">'+L('Clear','Burahin')+'</span><span>0</span><span>⌫</span></div>'}
+function tk(claim){return TB()+'<div class="body"><div class="card" style="text-align:center;padding:18px"><p class="sub">'+(claim?L('Your queue number for claiming','Ang iyong queue number sa pag-claim'):L('Your queue number','Ang iyong queue number'))+'</p><div class="qn">'+(claim?'B-031':qnum())+'</div><p class="sub" style="margin-top:10px">Ref. CIVIA-20261026-'+(claim?'031':'024')+'<br>'+(claim?nm(TX[0]):selNames())+'<br>'+(claim?'Oct 26, 2026, 1:40 PM':'Oct 26, 2026, 9:05 AM')+'</p></div>'+(claim?'<div class="card" style="text-align:center"><span class="sub">'+L('Now serving for ','Kasalukuyang tinatawag para sa ')+nm(TX[0])+'</span><br><b style="font-size:1.6em;color:var(--p)">B-027</b></div>':'<div class="card"><span class="sub">'+L('Now serving','Kasalukuyang tinatawag')+'</span>'+servList()+'</div><div class="card" style="font-size:.9em">'+L('One queue number covers all your transactions. If you are still being served for one when your turn for another comes, the next person is called first. You will not lose your place.','Isang queue number ang para sa lahat ng iyong transaksyon. Kung tinatawag ka pa para sa isa kapag turn mo na sa isa pa, uunahin ang kasunod. Hindi mawawala ang pwesto mo.')+'</div><p class="note">'+L('Submitted documents on CIVIA web? Tell the staff you have a CIVIA web account and give your reference number.','Nag-submit ng dokumento sa CIVIA web? Sabihin sa staff na may CIVIA web account ka at ibigay ang reference number mo.')+'</p>')+'<div class="card" style="text-align:center">'+L('Your queue ticket is printing.<br>Please get it below.','Piniprint na ang iyong queue ticket.<br>Kunin ito sa ibaba.')+'</div><div style="flex:1"></div>'+btn('Done','Tapos na')+'</div>'+fab()}
+var S={
+wel:['Welcome (full-screen looping video)',function(){return '<div class="vfull"><div class="play"></div><h2>'+L('Welcome to CIVIA','Maligayang pagdating sa CIVIA')+'</h2><p>'+L('Requirements, tutorials, and queue numbers','Mga requirement, tutorial, at queue number')+'</p><p class="touch">'+L('Touch to begin','Pindutin para magsimula')+'</p><div class="tl"><i></i></div></div>'}],
+f8:['Home',function(){return home(fab())}],
+as:['Assist me (small chatbot)',function(){return home(pop(L('What do I need for birth registration?','Ano ang kailangan ko sa pagpaparehistro ng kapanganakan?'),L('Tap “View requirements,” then choose Birth Registration. You can print the list there.','I-tap ang “Tingnan ang mga requirement,” tapos piliin ang Pagpaparehistro ng Kapanganakan. Maaari mong i-print ang listahan doon.')))},1],
+rf:['Assist me (referral to office)',function(){return home(pop(L('Is my birth certificate valid for a passport?','Valid ba ang birth certificate ko para sa passport?'),L('I can’t give a reliable answer to that. Please contact or visit the Civil Registrar’s Office for official evaluation.','Wala akong maibibigay na maaasahang sagot diyan. Makipag-ugnayan o pumunta sa Civil Registrar’s Office para sa opisyal na pagsusuri.')))},1],
+f11a:['Select transaction (queue number)',function(){return TB()+'<div class="body"><h2>'+L('Select your transaction(s)','Piliin ang iyong transaksyon')+'</h2><p class="sub">'+L('You can choose more than one. You will get one queue number for all of them.','Maaari kang pumili ng higit sa isa. Isang queue number lang ang makukuha mo para sa lahat.')+'</p>'+rowsM(sel)+'<p class="note">'+L(sel.length+' selected',sel.length+' ang napili')+'</p>'+btn('Get Queue Number','Kumuha ng Queue Number')+btn('Back','Bumalik',1)+'</div>'+fab()},1],
+t2:['Queue number screen (walk-in)',function(){return tk(0)}],
+cc:['Enter claim code',function(){return TB()+'<div class="body"><h2>'+L('Enter your claim code','Ilagay ang iyong claim code')+'</h2><p class="sub">'+L('Use the 6-digit code from your Ready-for-Claim message (email or SMS).','Gamitin ang 6-digit na code mula sa iyong Ready-for-Claim na mensahe (email o SMS).')+'</p>'+codeBoxes()+''+keys()+'<p class="note">'+L('No code yet? Check your email or SMS for the Ready-for-Claim message, or ask our staff.','Wala pang code? Tingnan ang email o SMS para sa Ready-for-Claim na mensahe, o magtanong sa aming staff.')+'</p><div class="row">'+btn('Back','Bumalik',1)+btn('Continue','Magpatuloy')+'</div></div>'+fab()}],
+ce:['Claim code not accepted',function(){return TB()+'<div class="body"><h2>'+L('Enter your claim code','Ilagay ang iyong claim code')+'</h2>'+codeBoxes()+'<div class="card ab">⚠<span>'+L('<b>Code not accepted.</b> It may be incorrect, expired, or already used.','<b>Hindi tinanggap ang code.</b> Maaaring mali, expired na, o nagamit na ito.')+'</span></div><p class="sub">'+L('Check the code in your Ready-for-Claim message and try again. If the problem continues, please approach our staff.','Tingnan ang code sa iyong Ready-for-Claim na mensahe at subukang muli. Kung magpatuloy ang problema, lumapit sa aming staff.')+'</p><p class="note">'+L('The number of tries is limited.','Limitado ang bilang ng pagsubok.')+'</p><div style="flex:1"></div><div class="row">'+btn('Back','Bumalik',1)+btn('Try again','Subukan muli')+'</div></div>'+fab()}],
+cl:['Too many attempts',function(){return TB()+'<div class="body"><div class="card ab">⚠<span>'+L('<b>Code entry is paused.</b> Too many incorrect attempts.','<b>Naka-pause ang pag-enter ng code.</b> Masyadong maraming maling pagsubok.')+'</span></div><h2>'+L('Please approach our staff','Lumapit po sa aming staff')+'</h2><p class="sub">'+L('Our staff will help you with your claim. Your documents are not affected.','Tutulungan ka ng aming staff sa iyong pag-claim. Hindi apektado ang iyong mga dokumento.')+'</p><div style="flex:1"></div>'+btn('Back to home','Bumalik sa home',1)+'</div>'+fab()}],
+cv:['Claim code accepted',function(){return TB()+'<div class="body"><div class="card" style="text-align:center"><div class="ok" style="width:44px;height:44px;margin:0 auto 8px;font-size:22px">✓</div><h2>'+L('Claim code accepted','Tinanggap ang claim code')+'</h2><p class="sub">'+L('Your documents are ready for claim.','Handa nang i-claim ang iyong mga dokumento.')+'</p></div><div class="card"><p class="sub">'+L('Transaction','Transaksyon')+'</p><b>'+nm(TX[0])+'</b><p class="sub" style="margin-top:8px">'+L('Claim period','Panahon ng pag-claim')+'</p><b>'+L('Until Nov 2, 2026, within office hours (Mon–Fri, 8:00 AM–5:00 PM)','Hanggang Nob 2, 2026, sa oras ng opisina (Lun–Biy, 8:00 AM–5:00 PM)')+'</b></div><div style="flex:1"></div>'+btn('Get my queue number for claiming','Kunin ang queue number ko sa pag-claim')+btn('Back','Bumalik',1)+'</div>'+fab()}],
+tc:['Queue number screen (claiming)',function(){return tk(1)}],
+tkt:['Printed ticket',function(){return '<div class="body" style="justify-content:center;background:#c9d3dc"><div class="tk"><b style="font-size:16px">CIVIA</b>City Civil Registrar’s Office<br>Puerto Princesa<br>--------------------<br>QUEUE NUMBER<b>'+qnum()+'</b>Ref: CIVIA-20261026-024<br>'+selNames()+'<br>Oct 26, 2026 9:05 AM<br>--------------------<br>'+L('Please wait for your<br>number to be called.','Hintayin po na tawagin<br>ang inyong numero.')+'</div><p class="note" style="color:#0A2540">'+L('58 mm thermal ticket. No name or personal information.','58 mm thermal ticket. Walang pangalan o personal na impormasyon.')+'</p></div>'}],
+f9a:['Requirements',function(){return TB()+'<div class="body"><h2>'+L('Select a transaction','Pumili ng transaksyon')+'</h2>'+rows(rq)+'<div class="card"><h3>'+L('Requirements: ','Mga Requirement: ')+nm(TX[rq])+'</h3>'+li(TX[rq][3])+'</div><div class="row">'+btn('Back','Bumalik',1)+btn('Print Requirements','I-print ang mga Requirement')+'</div></div>'+fab()},1],
+f10p:['Print requirement list',function(){return TB()+'<div class="body"><h2>'+L('Print your requirements','I-print ang iyong mga requirement')+'</h2><div class="card" style="background:#fff;color:#000;border:1px dashed #888"><h3>'+nm(TX[rq])+': '+L('Requirements','Mga Requirement')+'</h3>'+TX[rq][3].map(function(x,i){return (i+1)+'. '+L(x[0],x[1])}).join('<br>')+'<br><small>City Civil Registrar’s Office, Puerto Princesa</small></div><p class="note">'+L('No personal information is printed.','Walang personal na impormasyon na ipi-print.')+'</p><div style="flex:1"></div>'+btn('Print Requirement List','I-print ang Listahan ng Requirement')+btn('Back','Bumalik',1)+'<p class="note">'+L('Printing… Please get your printout below.','Piniprint… Kunin ang printout sa ibaba.')+'</p></div>'+fab()}],
+tut:['Tutorials (all transactions)',function(){return TB()+'<div class="body"><h2>'+L('How to use this kiosk','Paano gamitin ang kiosk na ito')+'</h2><div class="vid" style="flex:none;min-height:180px"><div class="play"></div><b>'+L('Tutorial video','Tutorial video')+'</b><small>1:20</small><div class="tl"><i></i></div></div><div class="card">'+L('1. Choose what you need on the home screen.<br>2. Pick one or more transactions.<br>3. Print your requirement list or get a queue number.<br>4. Watch the display screen for your number.<br>5. Already received a Ready-for-Claim message? Tap “I have a claim code” and enter the code.','1. Piliin ang kailangan mo sa home screen.<br>2. Pumili ng isa o higit pang transaksyon.<br>3. I-print ang listahan ng requirement o kumuha ng queue number.<br>4. Abangan ang numero mo sa display screen.<br>5. Natanggap na ang Ready-for-Claim na mensahe? I-tap ang “May claim code ako” at ilagay ang code.')+'</div><h3>'+L('Tutorial for each transaction','Tutorial para sa bawat transaksyon')+'</h3><p class="sub">'+L('Tap a transaction to see its requirements and steps.','I-tap ang transaksyon para makita ang mga requirement at hakbang.')+'</p>'+TX.map(function(t,i){return '<details class="card"'+(i===0?' open':'')+'><summary><span><span class="cd">'+t[0]+'</span>'+nm(t)+'</span></summary><div class="dt"><div class="vid mini"><div class="play"></div><small>Video: '+nm(t)+'</small><div class="tl"><i></i></div></div><b>'+L('Requirements','Mga Requirement')+'</b>'+li(t[3])+steps()+'</div></details>'}).join('')+btn('Back to home','Bumalik sa home',1)+'</div>'},1]
+};
+var st=document.getElementById('stage'),idle;
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.style.opacity=1;clearTimeout(toast.h);toast.h=setTimeout(function(){t.style.opacity=0},1800)}
+function draw(){st.innerHTML='<div class="f'+(bg?' big':'')+'" lang="'+(lang==='fil'?'fil':'en')+'">'+S[cur][1]()+'</div>'}
+function go(k){cur=k;draw()}
+function reset(){lang='en';bg=false;sel=[];rq=0;code='';tries=0;go('wel')}
+function idleReset(){clearTimeout(idle);idle=setTimeout(function(){if(cur!=='wel')reset()},60000)}
+function asst(i){var q=AQ()[i],d=document.createElement('div');d.className='asst';d.innerHTML=pop(q[0],q[1]);st.firstChild.appendChild(d)}
+st.addEventListener('click',function(e){
+var t=e.target,f=st.firstChild,a=t.closest('.asst');
+if(a){var qq=t.closest('[data-q]');if(t.closest('[data-x]')||t===a)a.remove();else if(qq){var q=AQ()[qq.dataset.q];a.innerHTML=pop(q[0],q[1])}return}
+if(t.closest('.fab')){asst(0);return}
+var pl=t.closest('.pills>span');if(pl){if(pl===pl.parentNode.firstChild)lang=lang==='en'?'fil':'en';else bg=!bg;draw();return}
+if(t.closest('.bar>span:first-child')){go('f8');return}
+if(cur==='wel'){go('f8');return}
+var b=t.closest('.btn'),bi=b?[].indexOf.call(f.querySelectorAll('.btn'),b):-1;
+var o=t.closest('.opt');if(o&&cur==='f8'){go(['f11a','cc','f9a','tut'][[].indexOf.call(f.querySelectorAll('.opt'),o)]);return}
+var x=t.closest('.tx');if(x){var n=[].indexOf.call(f.querySelectorAll('.tx'),x);if(cur==='f11a'){var p=sel.indexOf(n);if(p>-1)sel.splice(p,1);else sel.push(n);sel.sort(function(u,v){return u-v});draw()}else if(cur==='f9a'){rq=n;draw()}return}
+var k=t.closest('.keys span');if(k&&cur==='cc'){var kn=[].indexOf.call(f.querySelectorAll('.keys span'),k);if(kn===9)code='';else if(kn===11)code=code.slice(0,-1);else if(code.length<6)code+=(kn===10?'0':String(kn+1));draw();return}
+if(!b)return;
+if(cur==='f11a'){if(bi===1)go('f8');else if(!sel.length)toast(L('Please select at least one transaction.','Pumili ng kahit isang transaksyon.'));else go('t2')}
+else if(cur==='t2'||cur==='tc')reset();
+else if(cur==='cc'){if(bi===0){code='';go('f8')}else if(code.length<6)toast(L('Enter all 6 digits.','Ilagay ang lahat ng 6 na digit.'));else if(code===DEMO){go('cv')}else{tries++;go(tries>=3?'cl':'ce')}}
+else if(cur==='ce'){if(bi===0){code='';go('f8')}else{code='';go('cc')}}
+else if(cur==='cl'){tries=0;code='';go('f8')}
+else if(cur==='cv'){if(bi===0)go('tc');else{code='';go('cc')}}
+else if(cur==='f9a'){if(bi===0)go('f8');else go('f10p')}
+else if(cur==='f10p'){if(bi===0)toast(L('Printing… Please get your printout below.','Piniprint… Kunin ang printout sa ibaba.'));else go('f9a')}
+else if(cur==='tut')go('f8')});
+document.addEventListener('pointerdown',idleReset);idleReset();
+draw();
+</script>
+</body>
+</html>
