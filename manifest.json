@@ -1,0 +1,12 @@
+
+{
+  "id": "/KIOSK/",
+  "name": "CIVIA Smart Kiosk",
+  "short_name": "CIVIA",
+  "start_url": "/KIOSK/",
+  "scope": "/KIOSK/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#0B3D91"
+}
